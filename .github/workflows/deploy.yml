@@ -36,3 +36,11 @@
 
         - name: 📦 Uploud artifact
           uses: actions/upload-pages-artifact@v3
+          with:
+            # Faz uploud de toda a raiz do projeto
+            path: "."
+
+          # Deploy para o GitHub Pages
+          - name: Deploy to GitHub Pages
+            id: deployment
+            uses: actions/deploy-pages@v4
