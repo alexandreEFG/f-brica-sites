@@ -33,6 +33,7 @@
                         <option value="mensagem">Uma mensagem</option>
                         
                  </select>
+                 <br>
                  <label for="mensagem">mensagem:</label>
                  <textarea name="mensagem" id="mensagem" cols="82" rows="28"></textarea>
 
@@ -42,46 +43,7 @@
 </button>
             </form>
         </div>
-        <script>
-            function validaForm() {
-                const email = document.getElementById('email');
-                let emailText = email.value.trim();
-                let valido = false;
-
-                if (emailText.includes("@")) {
-                    valido = true;
-                } else {
-                    valido = false;              //  console.log("Achei @!")
-                    }
-
-                    let partesEmail = emailText.split("@");
-                    if (partesEmail[0].length >= 7 && partesEmail[0].length <= 127) {
-                        valido = true;           // console.log("O tamanho está entre 7 e 127");
-                    } else {
-                        valido = false;
-                    }
-                    const nome = document.getElementById("nome");
-                    let nomeText = nome.value.trim();
-                    if(nome.length >= 3){
-                      valido = true;             // console.log("Nome atende ao tamanho mínimo")
-
-                    } else {
-                        valido = false
-                    }
-                    const textArea = document.getElementById("mensagem");
-                    let textTexto = textArea.value.trim();
-                    if (textTexto === ""){       // console.log("Texto não pode ser vazio!")
-                    }
-                    if (valido) {
-                    } else {
-                        alert("Recebemos sua mensagem, em breve entraremos em contato.")
-                    }
-                }
-                document.addEventListener("submit",function(e){
-                    e.preventDefault();
-                    validaForm();
-                })
-        </script>
+        <script></script>
         <footer> <p>Desenvolvido por Carlos Alexandre da Silva Fontenele</p></footer>
 </body>
 </html>
